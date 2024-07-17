@@ -65,6 +65,7 @@ function Signin() {
 
 		if (isValid) {
 			alert("Form submitted successfully!");
+			navigate("/dashboard");
 		}
 	};
 
