@@ -41,6 +41,7 @@ body {
    border-radius: 20px;
    width: 150px;
    margin: auto;
+   border: none
 }
 
 @media (min-width: 640px) {
@@ -52,7 +53,7 @@ body {
       flex-direction: column;
       gap: 15px;
       box-shadow: 1em 0 .4em gray;
-      width: 400px;
+      width: 300px;
       margin: auto;
    }
 }

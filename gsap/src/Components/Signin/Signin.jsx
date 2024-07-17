@@ -64,9 +64,7 @@ function Signin() {
 		}
 
 		if (isValid) {
-			// Proceed with form submission
 			alert("Form submitted successfully!");
-			// Redirect or any other action
 		}
 	};
 
@@ -109,11 +107,7 @@ function Signin() {
 						margin='normal'
 					/>
 					<span className='error-style'>{input.passwordError}</span>
-					<button
-						type='submit'
-						variant='contained'
-						className='btn-style'
-					>
+					<button type='submit' className='btn-style'>
 						Sign In
 					</button>
 				</Box>
