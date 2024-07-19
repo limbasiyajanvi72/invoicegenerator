@@ -20,15 +20,14 @@ function SignUp() {
 	});
 
 	const [valid, setValid] = useState({
-		email: true,
-		password: true,
-		name: true,
+		email: false,
+		password: false,
+		name: false,
 		button: true,
 	});
 
 	const handleEmailChange = (e) => {
 		e.preventDefault();
-		setValid({ ...valid, email: false });
 		setInput({ ...input, email: e.target.value });
 
 		let isEmailValid = validateEmail(input.email);
@@ -49,7 +48,6 @@ function SignUp() {
 
 	const handlePasswordChange = (e) => {
 		e.preventDefault();
-		setValid({ ...valid, password: false });
 		setInput({ ...input, password: e.target.value });
 		let isPassValid = validatePassword(input.password);
 		if (isPassValid != "") {
@@ -69,7 +67,6 @@ function SignUp() {
 
 	const handleNameChange = (e) => {
 		e.preventDefault();
-		setValid({ ...valid, name: false });
 		setInput({ ...input, name: e.target.value });
 		let isNameValid = validateName(input.name);
 		if (isNameValid != "") {
@@ -126,13 +123,13 @@ function SignUp() {
 						sx={{
 							"& .MuiOutlinedInput-root": {
 								"&.Mui-focused fieldset": {
-									borderColor: valid.name
-										? "#4F46E5"
-										: "#fb4137",
+									borderColor: input.nameError
+										? "#fb4137"
+										: "#4F46E5",
 								},
 							},
 							"& .MuiInputLabel-root.Mui-focused": {
-								color: valid.name ? "#4F46E5" : "#fb4137",
+								color: input.nameError ? "#fb4137" : "#4F46E5",
 							},
 						}}
 					/>
@@ -153,13 +150,13 @@ function SignUp() {
 						sx={{
 							"& .MuiOutlinedInput-root": {
 								"&.Mui-focused fieldset": {
-									borderColor: valid.email
-										? "#4F46E5"
-										: "#fb4137",
+									borderColor: input.emailError
+										? "#fb4137"
+										: "#4F46E5",
 								},
 							},
 							"& .MuiInputLabel-root.Mui-focused": {
-								color: valid.email ? "#4F46E5" : "#fb4137",
+								color: input.emailError ? "#fb4137" : "#4F46E5",
 							},
 						}}
 					/>
@@ -182,13 +179,15 @@ function SignUp() {
 						sx={{
 							"& .MuiOutlinedInput-root": {
 								"&.Mui-focused fieldset": {
-									borderColor: valid.password
-										? "#4F46E5"
-										: "#fb4137",
+									borderColor: input.passwordError
+										? "#fb4137"
+										: "#4F46E5",
 								},
 							},
 							"& .MuiInputLabel-root.Mui-focused": {
-								color: valid.password ? "#4F46E5" : "#fb4137",
+								color: input.passwordError
+									? "#fb4137"
+									: "#4F46E5",
 							},
 						}}
 					/>
