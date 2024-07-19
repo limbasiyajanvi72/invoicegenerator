@@ -76,6 +76,76 @@ body {
 
 }
 
+.sidebar-container {
+   position: fixed;
+   top: 0;
+   left: 0;
+   overflow-y: auto;
+   width: 270px;
+   background-color: #101826;
+   height: auto;
+
+
+   .sidebar-heading-container {
+
+      display: flex;
+      justify-content: space-between;
+      gap: 7px;
+      padding: 20px;
+
+      .sidebar-logo-container {
+         display: flex;
+         gap: 7px;
+      }
+
+      .react-container {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         gap: 4px;
+         padding-left: 8px;
+         padding-right: 8px;
+         background-color: #23272f;
+         color: #289BC0;
+         font-size: 12px;
+         font-weight: 500;
+         border-radius: 5px;
+         height: 26px;
+         /* padding-top: 1px;
+         padding-bottom: 1px; */
+      }
+
+      .language-container {
+         display: flex;
+         justify-content: end;
+         align-items: end;
+         font-size: 13px;
+         font-weight: 500;
+         height: 22px;
+         width: 22px;
+         border-radius: 4px;
+         padding-bottom: 2px;
+         padding-right: 3px;
+      }
+
+      .typescript {
+         background-color: #2177c4;
+         color: #FFF;
+      }
+
+      .javascript {
+         background-color: #f1dd5e;
+         color: #000;
+
+      }
+
+      .sidebar-logo {
+         height: 32px;
+         width: 32px;
+      }
+   }
+}
+
 @media (min-width: 640px) {
    .siginin-container {
       padding: 48px;

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { validateEmail, validatePassword } from "../../utils/AuthForm";
-import AuthForm from "../AuthForm";
 import { Box, TextField } from "@mui/material";
 import GlobalSvg from "../../assets/Icons/GlobalSvg";
 

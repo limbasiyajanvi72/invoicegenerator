@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 function GlobalSvg() {
+	const [size, setSize] = useState(52);
+	useEffect(() => {
+		if (window.location.pathname.includes("/dashboard")) {
+			setSize(32);
+		}
+	}, []);
+
 	return (
 		<svg
 			xmlns='http://www.w3.org/2000/svg'
-			width='52'
-			height='52'
+			width={size}
+			height={size}
 			viewBox='0 0 35 35'
 			fill='none'
 		>
