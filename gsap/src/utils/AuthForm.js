@@ -16,8 +16,8 @@ const passwordRegex =
 export const validatePassword = (password) => {
 	let passwordError = "";
 
-	if (password.length < 8) {
-		passwordError = "Password should be at least 8 characters long";
+	if (password.length < 8 || password.length > 15) {
+		passwordError = "Password must be between 8 to 15 characters long";
 	} else {
 		if (!passwordRegex.test(password)) {
 			passwordError =
@@ -27,4 +27,21 @@ export const validatePassword = (password) => {
 		}
 	}
 	return passwordError;
+};
+
+const nameRegex = /^[a-zA-Z]{4,20}$/;
+
+export const validateName = (name) => {
+	let nameError = "";
+
+	if (name.length < 4 || name.length > 20) {
+		nameError = "Name must be between 4 to 20 characters long";
+	} else {
+		if (!nameRegex.test(name)) {
+			nameError = "Name must be alphabetical letters";
+		} else {
+			nameError = "";
+		}
+	}
+	return nameError;
 };

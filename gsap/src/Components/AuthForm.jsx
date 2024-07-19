@@ -3,7 +3,9 @@ import React from "react";
 
 function AuthForm({
 	heading,
+	accountStatus,
 	link,
+
 	email,
 	password,
 	emailError,
@@ -13,6 +15,7 @@ function AuthForm({
 	handleEmailChange,
 	handlePasswordChange,
 	handleSubmit,
+	navigate,
 }) {
 	return (
 		<div className='outer-container'>
@@ -20,8 +23,8 @@ function AuthForm({
 				<div className='logo-container'>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
-						width='48'
-						height='48'
+						width='52'
+						height='52'
 						viewBox='0 0 35 35'
 						fill='none'
 					>
@@ -70,7 +73,7 @@ function AuthForm({
 				<div className='heading-container'>
 					<p className='heading-style'>{heading}</p>
 					<p className='acc-style'>
-						Don't have an account?{" "}
+						{accountStatus}
 						<span onClick={() => navigate("/register")}>
 							{link}
 						</span>
@@ -92,7 +95,6 @@ function AuthForm({
 						margin='normal'
 						InputLabelProps={{
 							style: {
-								fontFamily: '"Brix Sans", sans-serif',
 								fontSize: "14px",
 								fontWeight: "500",
 							},
@@ -123,7 +125,6 @@ function AuthForm({
 								fontSize: "14px",
 								fontWeight: "500",
 							},
-							fontFamily: '"Brix Sans", sans-serif',
 						}}
 						sx={{
 							"& .MuiOutlinedInput-root": {
