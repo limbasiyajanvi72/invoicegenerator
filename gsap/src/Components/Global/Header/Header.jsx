@@ -56,17 +56,16 @@ function Header() {
 					</g>
 				</svg>
 			</div>
-			<div className='header-profile-container'>
-				<div className='header-profile-section'>
-					<div>
-						<span>Abbott Keitch</span>
-						<span>admin@fusetheme.com</span>
-					</div>
-					<img
-						src='https://react-material.fusetheme.com/assets/images/avatars/brian-hughes.jpg'
-						className='header-profile-picture'
-					/>
+
+			<div className='header-profile-section'>
+				<div>
+					<span>Abbott Keitch</span>
+					<span>admin@fusetheme.com</span>
 				</div>
+				<img
+					src='https://react-material.fusetheme.com/assets/images/avatars/brian-hughes.jpg'
+					className='header-profile-picture'
+				/>
 			</div>
 		</div>
 	);
