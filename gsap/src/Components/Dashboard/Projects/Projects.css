@@ -1,0 +1,81 @@
+.project-heading-container {
+   display: flex;
+   justify-content: space-between;
+   padding-top: 45px;
+   padding-left: 30px;
+   padding-right: 30px;
+   height: 160px;
+   background-color: white;
+   border-bottom: 1px solid #e2e8f0;
+
+
+   .project-profile-container {
+      display: flex;
+      gap: 10px;
+
+
+
+
+      .profile-container {
+         height: 64px;
+         width: 64px;
+         border-radius: 50%;
+      }
+
+
+      .notification-container {
+         display: flex;
+         gap: 5px;
+         justify-content: flex-start;
+         align-items: center;
+      }
+
+      .name-style {
+         font-size: 36px;
+         font-weight: 600;
+         color: #111827;
+         margin: 0;
+      }
+
+      .notification-style {
+         color: #6B7280;
+         font-size: 14px;
+         margin: 0;
+      }
+   }
+
+   .button-container {
+      display: flex;
+      gap: 20px;
+
+      .message-button {
+         background-color: #1E293B;
+         border-radius: 20px;
+         border: 0;
+         width: 124px;
+         height: 40px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         gap: 4px;
+         color: white;
+         font-size: 14px;
+         font-weight: 400;
+      }
+
+      .settings-button {
+         background-color: #4f3fe0;
+         border-radius: 20px;
+         border: 0;
+         width: 110px;
+         height: 40px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         gap: 8px;
+         color: white;
+         font-size: 14px;
+         font-weight: 400;
+      }
+   }
+}

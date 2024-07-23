@@ -5,10 +5,10 @@ import Signin from "./Components/Signin/Signin";
 import Dashbord from "./Components/Dashboard/Dashbord";
 import SignUp from "./Components/SignUp/SignUp";
 import Layout from "./Components/Layout/Layout";
-import Projects from "./Components/Dashboard/Projects";
-import Analytics from "./Components/Dashboard/Analytics";
-import Finance from "./Components/Dashboard/Finance";
-import Crypto from "./Components/Dashboard/Crypto";
+import Projects from "./Components/Dashboard/Projects/Projects";
+import Analytics from "./Components/Dashboard/Analytics/Analytics";
+import Finance from "./Components/Dashboard/Finance/Finance";
+import Crypto from "./Components/Dashboard/Crypto/Crypto";
 
 function App() {
 	return (

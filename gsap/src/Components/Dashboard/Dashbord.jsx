@@ -1,6 +1,6 @@
 import React from "react";
 import Sidebar from "../Global/Sidebar/Sidebar";
-import Projects from "./Projects";
+import Projects from "./Projects/Projects";
 
 function Dashbord() {
 	return (
