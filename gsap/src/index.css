@@ -121,12 +121,15 @@ body {
 
       .toggle-container {
          display: flex;
-         justify-content: center;
-         align-items: center;
+         justify-content: flex-start;
+         align-items: flex-start;
          height: 20px;
          width: 20px;
          padding-bottom: 4px;
+         background-color: #101826;
       }
+
+
 
       .sidebar-logo-container {
          display: flex;
@@ -152,18 +155,7 @@ body {
 
       }
 
-      .language-container {
-         display: flex;
-         justify-content: end;
-         align-items: end;
-         font-size: 13px;
-         font-weight: 500;
-         height: 22px;
-         width: 22px;
-         border-radius: 4px;
-         padding-bottom: 2px;
-         padding-right: 3px;
-      }
+
 
       .typescript {
          background-color: #2177c4;
@@ -290,12 +282,14 @@ body {
    .serach-style {
       outline: none;
       border: none;
-      font-size: 14px;
+      font-size: 16px;
       padding-left: 10px;
       color: #757575;
       font-weight: 500;
+      cursor: text;
+      display: inline-block;
+      width: 90%;
    }
-
 
    .header-profile-container {
       display: flex;

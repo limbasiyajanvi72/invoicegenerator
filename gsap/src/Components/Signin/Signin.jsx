@@ -71,7 +71,7 @@ function Signin() {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		navigate("/dashboard");
+		navigate("/dashboard/projects");
 	};
 
 	return (

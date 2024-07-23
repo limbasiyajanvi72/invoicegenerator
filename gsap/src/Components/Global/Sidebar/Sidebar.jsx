@@ -8,8 +8,10 @@ import { HiOutlineAcademicCap } from "react-icons/hi";
 import { FaRegCalendar } from "react-icons/fa";
 import { MdOutlineMessage } from "react-icons/md";
 import { IoMdContacts } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 
 function Sidebar() {
+	const navigate = useNavigate();
 	return (
 		<div className='sidebar-container'>
 			<article className='sidebar-heading-container'>
@@ -71,7 +73,10 @@ function Sidebar() {
 					</span>
 				</div>
 				<div className='menu-list'>
-					<div className='menu-list-style'>
+					<div
+						className='menu-list-style'
+						onClick={() => navigate("/dashboard/projects")}
+					>
 						<GoProjectRoadmap
 							style={{
 								color: "#FFFFFFB3",
@@ -81,7 +86,10 @@ function Sidebar() {
 						/>
 						<div className='menu-name'>Project</div>
 					</div>
-					<div className='menu-list-style'>
+					<div
+						className='menu-list-style'
+						onClick={() => navigate("/dashboard/analytics")}
+					>
 						<GrAnalytics
 							style={{
 								color: "#FFFFFFB3",
@@ -91,7 +99,10 @@ function Sidebar() {
 						/>
 						<div className='menu-name'>Analytics</div>
 					</div>
-					<div className='menu-list-style'>
+					<div
+						className='menu-list-style'
+						onClick={() => navigate("/dashboard/finance")}
+					>
 						<FaMoneyBill
 							style={{
 								color: "#FFFFFFB3",
@@ -101,7 +112,10 @@ function Sidebar() {
 						/>
 						<div className='menu-name'>Finance</div>
 					</div>
-					<div className='menu-list-style'>
+					<div
+						className='menu-list-style'
+						onClick={() => navigate("/dashboard/crypto")}
+					>
 						<LuCircleDollarSign
 							style={{
 								color: "#FFFFFFB3",
@@ -109,7 +123,12 @@ function Sidebar() {
 								width: "20px",
 							}}
 						/>
-						<div className='menu-name'>Crypto</div>
+						<div
+							className='menu-name'
+							onClick={() => navigate("/dashboard/crypto")}
+						>
+							Crypto
+						</div>
 					</div>
 				</div>
 				<div className='menu-heading-container'>
