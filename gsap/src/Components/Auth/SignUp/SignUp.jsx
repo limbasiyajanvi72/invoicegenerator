@@ -5,8 +5,9 @@ import {
 	validateEmail,
 	validateName,
 	validatePassword,
-} from "../../utils/AuthForm";
-import GlobalSvg from "../../assets/Icons/GlobalSvg";
+} from "../../../utils/AuthForm";
+import GlobalSvg from "../../../assets/Icons/GlobalSvg";
+import "../../Auth/Auth.css";
 
 function SignUp() {
 	const navigate = useNavigate();

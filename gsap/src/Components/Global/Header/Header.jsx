@@ -10,6 +10,7 @@ import { FaRegBell } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
 import { PiSignOutBold } from "react-icons/pi";
 import { IoMdClose } from "react-icons/io";
+import "./Header.css";
 
 function Header() {
 	const [menu, setToggleMenu] = useState({ lang: false, profile: false });

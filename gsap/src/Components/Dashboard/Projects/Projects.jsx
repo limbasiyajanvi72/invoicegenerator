@@ -3,6 +3,7 @@ import "./Projects.css";
 import { FaBell } from "react-icons/fa6";
 import { MdMail } from "react-icons/md";
 import { IoMdSettings } from "react-icons/io";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 function Projects() {
 	return (
@@ -13,7 +14,7 @@ function Projects() {
 						src='https://react-material.fusetheme.com/assets/images/avatars/brian-hughes.jpg'
 						className='profile-container'
 					/>
-					<div>
+					<div className='profile-data-container'>
 						<h4 className='name-style'>
 							Welcome back, Abbott Keitch!
 						</h4>
@@ -25,9 +26,9 @@ function Projects() {
 									width: "20px",
 								}}
 							/>
-							<p className='notification-style'>
+							<span className='notification-style'>
 								You have 2 new messages and 15 new tasks
-							</p>
+							</span>
 						</div>
 					</div>
 				</div>
@@ -52,6 +53,14 @@ function Projects() {
 						/>
 						Settings
 					</button>
+				</div>
+				<div className='project-menu-container'>
+					ACME Corp. Backend App
+					<span>
+						<MdOutlineKeyboardArrowDown
+							style={{ height: "20px", width: "20px" }}
+						/>
+					</span>
 				</div>
 			</article>
 		</section>
