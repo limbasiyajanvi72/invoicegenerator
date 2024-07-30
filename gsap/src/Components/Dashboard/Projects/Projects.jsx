@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Projects.css";
 import { FaBell } from "react-icons/fa6";
 import { MdMail } from "react-icons/md";
 import { IoMdSettings } from "react-icons/io";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import Home from "./Home/Home";
+import Budget from "./Budget/Budget";
+import Team from "./Team/Team";
 
 function Projects() {
+	const [menu, toggleMenu] = useState(false);
+	const [tab, setTab] = useState("Home");
+	const closeProjectMenu = () => {
+		if (menu) {
+			toggleMenu(false);
+		}
+	};
 	return (
-		<section>
+		<section onClick={() => closeProjectMenu()}>
 			<article className='project-heading-container'>
 				<div className='project-profile-container'>
 					<img
@@ -54,7 +64,14 @@ function Projects() {
 						Settings
 					</button>
 				</div>
-				<div className='project-menu-container'>
+
+				<div
+					className={`project-menu-container `}
+					onClick={(e) => {
+						toggleMenu(!menu);
+						e.stopPropagation();
+					}}
+				>
 					ACME Corp. Backend App
 					<span>
 						<MdOutlineKeyboardArrowDown
@@ -62,6 +79,52 @@ function Projects() {
 						/>
 					</span>
 				</div>
+				{menu && (
+					<ul className='project-menu-items'>
+						<li>ACME Corp. Backend App</li>
+						<li>ACME Corp. Frontend App</li>
+						<li>Creapond</li>
+						<li>Wothinpixels</li>
+					</ul>
+				)}
+			</article>
+			<article>
+				<ul className='project-tab'>
+					<li
+						className={`project-tab-item ${
+							tab === "Home" ? "bg-active" : ""
+						}`}
+						onClick={() => setTab("Home")}
+					>
+						Home
+					</li>
+					<li
+						className='project-tab-item'
+						onClick={() => setTab("Budget")}
+					>
+						Budget
+					</li>
+					<li
+						className='project-tab-item'
+						onClick={() => setTab("Team")}
+					>
+						Team
+					</li>
+				</ul>
+			</article>
+			<article>
+				{(() => {
+					switch (tab) {
+						case "Home":
+							return <Home />;
+						case "Budget":
+							return <Budget />;
+						case "Team":
+							return <Team />;
+						default:
+							return <Home />;
+					}
+				})()}
 			</article>
 		</section>
 	);

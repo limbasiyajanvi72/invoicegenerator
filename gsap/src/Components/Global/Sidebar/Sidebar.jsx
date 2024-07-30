@@ -75,7 +75,13 @@ function Sidebar() {
 				</div>
 				<div className='menu-list'>
 					<div
-						className='menu-list-style'
+						className={`menu-list-style ${
+							window.location.pathname.includes(
+								"dashboard/projects"
+							)
+								? "sidebar-active"
+								: ""
+						}`}
 						onClick={() => navigate("/dashboard/projects")}
 					>
 						<GoProjectRoadmap
@@ -88,7 +94,13 @@ function Sidebar() {
 						<div className='menu-name'>Project</div>
 					</div>
 					<div
-						className='menu-list-style'
+						className={`menu-list-style ${
+							window.location.pathname.includes(
+								"dashboard/analytics"
+							)
+								? "sidebar-active"
+								: ""
+						}`}
 						onClick={() => navigate("/dashboard/analytics")}
 					>
 						<GrAnalytics
@@ -101,7 +113,13 @@ function Sidebar() {
 						<div className='menu-name'>Analytics</div>
 					</div>
 					<div
-						className='menu-list-style'
+						className={`menu-list-style ${
+							window.location.pathname.includes(
+								"dashboard/finance"
+							)
+								? "sidebar-active"
+								: ""
+						}`}
 						onClick={() => navigate("/dashboard/finance")}
 					>
 						<FaMoneyBill
@@ -114,7 +132,13 @@ function Sidebar() {
 						<div className='menu-name'>Finance</div>
 					</div>
 					<div
-						className='menu-list-style'
+						className={`menu-list-style ${
+							window.location.pathname.includes(
+								"dashboard/crypto"
+							)
+								? "sidebar-active"
+								: ""
+						}`}
 						onClick={() => navigate("/dashboard/crypto")}
 					>
 						<LuCircleDollarSign

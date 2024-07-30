@@ -169,7 +169,8 @@
          }
 
          .menu-list-style:hover {
-            background-color: #1c2431;
+            background-color: rgba(255, 255, 255, 0.05);
+            ;
          }
       }
 
@@ -227,4 +228,8 @@
       width: 96px;
       border-radius: 50%;
    }
+}
+
+.sidebar-active {
+   background-color: #28303c;
 }
