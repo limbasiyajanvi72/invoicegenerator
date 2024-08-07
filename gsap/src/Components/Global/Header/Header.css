@@ -156,7 +156,11 @@
       border-radius: 23px;
       padding: 4px;
       background-color: white;
+
+
    }
+
+
 
    .header-profile-section:hover {
 
@@ -173,8 +177,8 @@
 
    .header-profile-section div span:first-child {
       font-size: 14px;
-      font-weight: 500;
-      color: #000000DE;
+      font-weight: 600;
+      color: #515151;
 
    }
 

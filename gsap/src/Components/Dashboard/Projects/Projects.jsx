@@ -75,16 +75,24 @@ function Projects() {
 					ACME Corp. Backend App
 					<span>
 						<MdOutlineKeyboardArrowDown
-							style={{ height: "20px", width: "20px" }}
+							style={{
+								height: "20px",
+								width: "20px",
+								paddingTop: "5px",
+								color: "#6f7072",
+								fontWeight: 700,
+							}}
 						/>
 					</span>
 				</div>
 				{menu && (
 					<ul className='project-menu-items'>
-						<li>ACME Corp. Backend App</li>
-						<li>ACME Corp. Frontend App</li>
-						<li>Creapond</li>
-						<li>Wothinpixels</li>
+						<li className='project-menu'>ACME Corp. Backend App</li>
+						<li className='project-menu'>
+							ACME Corp. Frontend App
+						</li>
+						<li className='project-menu'>Creapond</li>
+						<li className='project-menu'>Wothinpixels</li>
 					</ul>
 				)}
 			</article>
@@ -99,13 +107,17 @@ function Projects() {
 						Home
 					</li>
 					<li
-						className='project-tab-item'
+						className={`project-tab-item ${
+							tab === "Budget" ? "bg-active" : ""
+						}`}
 						onClick={() => setTab("Budget")}
 					>
 						Budget
 					</li>
 					<li
-						className='project-tab-item'
+						className={`project-tab-item ${
+							tab === "Team" ? "bg-active" : ""
+						}`}
 						onClick={() => setTab("Team")}
 					>
 						Team
